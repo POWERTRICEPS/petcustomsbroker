@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav>
-            
+            <h1 class="logo">Oriox Customs Broker</h1>
             <ul v-show="!mobile" class="navigation">
                 <li><router-link class="link" :to="{ name: 'Home'}">Home</router-link></li>
                 <li><router-link class="link" :to="{ name: 'Clearance'}">Clearance</router-link></li>
@@ -96,6 +96,7 @@ export default {
         }
 
         .link {
+            font-family: Helvetica, Arial,  sans-serif;
             font-size: 14px;
             transition: .5s ease all;
             padding-bottom: 4px;
@@ -115,6 +116,16 @@ export default {
                 width: 50px;
                 transition: .5s ease all; 
             }
+        }
+
+        .logo {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: flex-end;
+            left: 2%;
+            top: 25%
         }
 
         .navigation {

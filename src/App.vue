@@ -40,13 +40,16 @@ export default {
   color: #fff;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
+  margin: 5px 30px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
+  font-size: 25px;
+  font-family: Helvetica, Arial,  sans-serif;
+  height:75px;
+  width:200px;
 }
+
 .btn:focus {
   outline: none;
 }
