@@ -16,19 +16,19 @@
   <p class="middle2">Customs clearance for dog, cat, ornamental fish, and other pet import shipments at San Francisco, Los Angeles, Seattle, Chicago, Boston, New York, Miami, Dallas, Houston,   and other major airports</p>
   <div class="row2">
     <HomeCard
-      img= "logo.png"
+      img= "plane.png"
       text= "Rapid and Reliable"
     />
     <HomeCard
-      img= "logo.png"
+      img= "pricetag.png"
       text= "Competitive Price"
     />
     <HomeCard
-      img= "logo.png"
+      img= "support.png"
       text= "24/7 Support"
     />
     <HomeCard
-      img= "logo.png"
+      img= "pay.png"
       text= "Accept Zelle/Paypal/Venmo"
     />
   </div>
@@ -84,7 +84,7 @@ img {
   flex-direction: row;
   justify-content: center;
   position: absolute;
-  top: 30%;
+  top: 25%;
   
 }
 
@@ -101,7 +101,7 @@ img {
 .bottom {
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
-  top: 55%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;

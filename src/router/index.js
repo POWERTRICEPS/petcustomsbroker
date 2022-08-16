@@ -4,6 +4,8 @@ import HomePage from "../views/HomePage.vue";
 import ClearancePage from "../views/ClearancePage.vue";
 import ResourcesPage from "../views/ResourcesPage.vue";
 import ContactsPage from "../views/ContactsPage.vue";
+import PersonalPOA from "../views/PersonalPOA.vue";
+import BusinessPOA from "../views/BusinessPOA.vue";
 const routes = [
   {
     path: "/",
@@ -24,6 +26,16 @@ const routes = [
     path: "/contacts",
     name: "Contacts",
     component: ContactsPage
+  },
+  {
+    path: "/personalpoa",
+    name: "Personal",
+    component: PersonalPOA
+  },
+  {
+    path: "/businesspoa",
+    name: "Business",
+    component: BusinessPOA
   }
 ];
 

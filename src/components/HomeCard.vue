@@ -26,7 +26,7 @@
 img {
     width: 100px;
     height: 100px;
-    background-color: grey;
+    
 }
 .caption {
     margin: 10px 0px;
