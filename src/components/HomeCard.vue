@@ -32,5 +32,6 @@ img {
     margin: 10px 0px;
     display: block;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 </style>

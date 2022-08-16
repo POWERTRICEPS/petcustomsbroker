@@ -53,17 +53,18 @@ img {
   opacity: 0.8;
   width: 100%;
   height: 700px;
-  filter: brightness(50%);
+  filter: brightness(40%);
 }
 
 .middle {
+  font-weight: bold;
   font-family: Helvetica, Arial,  sans-serif;
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .middle2 {
@@ -71,9 +72,10 @@ img {
   position: relative;
   text-align: center;
   color: black;
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: bold;
   display: block;
-  margin: 50px 300px;
+  margin: 50px 320px;
 }
 
 .row1 {
@@ -104,5 +106,6 @@ img {
   transform: translate(-50%, -50%);
   color: white;
   font-size: 35px;
+  font-weight: bold;
 }
 </style>

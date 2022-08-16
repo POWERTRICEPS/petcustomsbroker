@@ -35,6 +35,7 @@ export default {
 }
 
 .btn {
+  font-weight: bold;
   display: inline-block;
   background: #000;
   color: #fff;

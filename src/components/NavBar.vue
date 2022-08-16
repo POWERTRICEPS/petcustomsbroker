@@ -62,10 +62,10 @@ export default {
 
 <style lang="scss" scoped>
     header{
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.8);
         z-index: 99;
         width: 100%;
-        position: fixed;
+        position: relative;
         transition: 0.5s ease all;
         color: #ffff;
 
@@ -96,6 +96,7 @@ export default {
         }
 
         .link {
+            font-weight: bold;
             font-family: Helvetica, Arial,  sans-serif;
             font-size: 14px;
             transition: .5s ease all;
@@ -129,6 +130,7 @@ export default {
         }
 
         .navigation {
+            
             display: flex;
             align-items: center;
             flex: 1;
