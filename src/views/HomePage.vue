@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <div>
     <img src="../assets/kitten.jpg">
     <h1 class="middle">Nationwide Customs Broker For Dogs and Cats</h1>
@@ -32,18 +33,23 @@
       text= "Accept Zelle/Paypal/Venmo"
     />
   </div>
+  <FooterBar/>
 
 </template>
 
 
 
 <script>
-import HomeCard from '../components/HomeCard.vue' 
+import HomeCard from '../components/HomeCard.vue'
+import NavBar from '../components/NavBar.vue'
+import FooterBar from '../components/FooterBar.vue'
 // @ is an alias to /src
 export default {
   name: "HomePage",
   components: {
-    HomeCard
+    HomeCard,
+    NavBar,
+    FooterBar
   },
 };
 </script>

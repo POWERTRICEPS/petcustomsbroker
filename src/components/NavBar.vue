@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav>
-            <router-link class="logo" :to="{ name: 'Home'}"> <img src="../assets/logo.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
+            <router-link class="logo" :to="{ name: 'Home'}"> <img src="../assets/logo.jpg">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
             
             <ul v-show="!mobile" class="navigation">
                 <li><router-link class="link" :to="{ name: 'Home'}">Home</router-link></li>
@@ -63,7 +63,7 @@ export default {
 
 <style lang="scss" scoped>
     header{
-        background-color: #126c8a; //rgba(0, 0, 0, 0.8);
+        background-color: #326698; //rgba(0, 0, 0, 0.8);
         z-index: 99;
         width: 100%;
         position: relative;

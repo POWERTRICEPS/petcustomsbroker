@@ -1,4 +1,5 @@
 <template>
+  <NavBar/>
   <div class="row">
 
     <div class="column">
@@ -25,15 +26,19 @@
     </div>
 
   </div>
+  <FooterBar/>
 </template>
 
 
 <script>
+import NavBar from '../components/NavBar.vue'
+import FooterBar from '../components/FooterBar.vue'
 // @ is an alias to /src
 export default {
   name: "ContactsPage",
   components: {
-    
+     NavBar,
+    FooterBar   
   },
 };
 </script>

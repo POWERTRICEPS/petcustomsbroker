@@ -1,4 +1,5 @@
 <template>
+<NavBar/>
     <div class="container">
       <h1 class="resource-title">INFORMATION FOR IMPORTING DOGS AND CATS</h1>
       <div class="section">
@@ -8,7 +9,8 @@
       <div class="section">
         <h2 class="section-title">Commercial Import</h2>
         <p class="word-block"> Puppies and dogs entering the United States intended for resale or adoption must be at least 6 months of age, The dogs must be in good health and vaccinated for rabies, distemper, hepatits, leptospirosis, parvovirus, and parainfluenza virus, Heath and vaccination must be issued in English by a veterinarian with  a valid license to practice veterinary medicine in the country of export. Commercial import also need an import permit issued by Animal Care/USDA0</p>
-        <h3>Bring in Dogs and Puppies from High Rabies Risk countries (click here for list of countries)</h3>
+        <h3>Bring in Dogs and Puppies from High Rabies Risk countries</h3>
+        <a href="https://www.cdc.gov/importation/bringing-an-animal-into-the-united-states/high-risk.html  ">(click here for list of countries)</a>
       </div>
       
       <div class="section">
@@ -31,16 +33,19 @@
     <!--link for usda import permit-->
     <!--link for cdc dogs import-->
     </div>
+<FooterBar/>
 </template>
 
 
 <script>
-
+import NavBar from '../components/NavBar.vue'
+import FooterBar from '../components/FooterBar.vue'
 // @ is an alias to /src
 export default {
   name: "ResourcesPage",
   components: {
-
+     NavBar,
+    FooterBar   
   },
 };
 </script>

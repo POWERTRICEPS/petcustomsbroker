@@ -1,4 +1,5 @@
 <template>
+    <NavBar/>
     <div class="row">
       <div class="column">
         <h1 class="clearance-section"> Documents for clearance</h1>
@@ -25,14 +26,19 @@ Usually it takes 1 to 2 hours for the pets to be transferred to the cargo facili
         </ol>
       </div>
     </div>
+  <FooterBar/>
 </template>
 
 
 <script>
+import NavBar from '../components/NavBar.vue'
+import FooterBar from '../components/FooterBar.vue'
 // @ is an alias to /src
 export default {
   name: "ClearancePage",
   components: {
+    NavBar,
+    FooterBar
   },
 };
 </script>
