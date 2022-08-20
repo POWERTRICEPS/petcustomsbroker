@@ -12,7 +12,9 @@
         <ul>
           <li><router-link class="poa-link" :to="{ name: 'Personal'}">Personal/Non Commercial Import Power of Attorney</router-link></li>
           <li><router-link class="poa-link" :to="{ name: 'Business'}">Business/Commercial Import Power of Attorney</router-link></li>
-          <li><h2 class="poa-link">Pro forma Invoice Template (if you don't have invoice from the shipper/breeder, you can use this template to generate one to declare value)</h2></li>
+          <!--<li><h2 class="poa-link">Pro forma Invoice Template (if you don't have invoice from the shipper/breeder, you can use this template to generate one to declare value)</h2></li>-->
+          <li><a href="/files/proforma_invoice_fillable.pdf" class="poa-link" download>Pro forma Invoice Template</a> <h2 class="poa-link">(if you don't have invoice from the shipper/breeder, you can use this template to generate one to declare value)</h2></li>
+          
         </ul>
       </div>
       <div class="column">
@@ -40,6 +42,11 @@ export default {
     NavBar,
     FooterBar
   },
+data () {
+  return {
+  publicPath: process.env.BASE_URL
+  }
+}
 };
 </script>
 

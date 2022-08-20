@@ -9,7 +9,7 @@
       <div class="section">
         <h2 class="section-title">Commercial Import</h2>
         <p class="word-block"> Puppies and dogs entering the United States intended for resale or adoption must be at least 6 months of age, The dogs must be in good health and vaccinated for rabies, distemper, hepatits, leptospirosis, parvovirus, and parainfluenza virus, Heath and vaccination must be issued in English by a veterinarian with  a valid license to practice veterinary medicine in the country of export. Commercial import also need an import permit issued by Animal Care/USDA0</p>
-        <h3>Bring in Dogs and Puppies from High Rabies Risk countries</h3>
+        <h3 >Bring in Dogs and Puppies from High Rabies Risk countries</h3>
         <a href="https://www.cdc.gov/importation/bringing-an-animal-into-the-united-states/high-risk.html  ">(click here for list of countries)</a>
       </div>
       

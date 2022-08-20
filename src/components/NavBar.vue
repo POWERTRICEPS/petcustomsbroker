@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav>
-            <router-link class="logo" :to="{ name: 'Home'}"> <img src="../assets/logo.jpg">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
+            <router-link class="logo" :to="{ name: 'Home'}"> <img src="../assets/logopic.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
             
             <ul v-show="!mobile" class="navigation">
                 <li><router-link class="link" :to="{ name: 'Home'}">Home</router-link></li>
