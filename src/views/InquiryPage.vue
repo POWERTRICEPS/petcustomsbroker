@@ -1,20 +1,21 @@
 <template>
     <NavBar/>
+    <div class="empty">
+      <h1>       z</h1>
+    </div>
     <form>
       <div class="centered">
-        <label >Personal Power of Attorney</label><br>
+        <label >Inquiry</label><br>
       </div>
+      <label>Email:</label>
+      <input type="text" required v-model="email">
       <label>Topic:</label>
-      <input type="text" required v-model="firstName">
+      <input type="text" required v-model="topic">
       <label>Message:</label>
-      <input type="text" required v-model="lastName">
-
-      <div v-show="disclaimer" class="centered">
-        <router-link :to="{name: 'InquiryPage'}">
-          <button class="submit" >Submit</button>
-        </router-link>
+      <textarea required v-model="msg"> </textarea>
+      <div class="centered">
+        <button class="submit" >Submit</button>
       </div>
-
     </form>
     <FooterBar/>
 
@@ -27,16 +28,22 @@ import FooterBar from '../components/FooterBar.vue'
 //import axios from 'axios'
 // @ is an alias to /src
 export default {
-  name: "PersonalPOA",
+  name: "InquiryPage",
   components: {
     NavBar,
     FooterBar      
   },
-
   data() {
     return {
+      email: '',
+      topic: '',
+      msg: '',
     }
-  }
+  },
+  mounted () {
+    window.scrollTo(0, 0)
+  },
+
   
 };
 </script>
@@ -55,16 +62,31 @@ form {
   padding:40px;
   border-radius: 10px;
 }
+.empty {
+  margin-bottom: 125px;
+}
 
 label {
-  color: #aaa;
   display: inline-block;
   margin: 25px 0 15px;
-  font-size: 0.6em;
+  font-size: 0.7em;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
 }
+
+textarea{
+  display: block;
+  padding: 10px 6px;
+  width: 100%;
+  box-sizing: border-box;
+  
+  
+  color: #555;
+  height:400px;
+  width:100%;
+}
+
 
 input {
   display: block;

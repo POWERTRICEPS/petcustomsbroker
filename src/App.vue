@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 * {
   padding: 0;
   margin: 0;
@@ -26,6 +27,7 @@ export default {
 }
 .app {
   min-height: 100vh;
+  min-width: 100vw;
   position: relative;
   background-color: #f1f1f1;
 }
@@ -33,6 +35,13 @@ export default {
   padding: 0 20px;
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.mobile-container {
+  padding: 0 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  min-width: 400px;
 }
 
 .btn {
@@ -62,6 +71,7 @@ export default {
   display: block;
   width: 100%;
 }
+
 
 
 </style>

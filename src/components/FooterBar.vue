@@ -3,8 +3,9 @@
         <div class="footer">
             <h1>Oriox Customs Broker Inc, 139 Mitchell Ave Ste 223, South San Francisco, CA 94080. Tel 650-866-3680 Fax 650-866-3679 </h1>
             <h1>&copy; 2022 All Rights Reserved</h1>
-            <img class="footer-logo" src="../assets/logopic.png">
+            
         </div>
+        <img class="footer-logo" src="../assets/logonew.png">
     </div>
 </template>
 
@@ -27,6 +28,7 @@
 }
 
 .footer-container {
+    width:100%;
     background-color: #212329;
     padding-bottom: 4rem;
 }

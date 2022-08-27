@@ -6,7 +6,8 @@ import ResourcesPage from "../views/ResourcesPage.vue";
 import ContactsPage from "../views/ContactsPage.vue";
 import PersonalPOA from "../views/PersonalPOA.vue";
 import BusinessPOA from "../views/BusinessPOA.vue";
-import POAForm from "../views/POAForm.vue";
+import PersonalPOAForm from "../views/PersonalPOAForm.vue";
+import BusinessPOAForm from "../views/BusinessPOAForm.vue";
 import InquiryPage from "../views/InquiryPage.vue";
 const routes = [
   {
@@ -40,9 +41,15 @@ const routes = [
     component: BusinessPOA
   },
   {
-    path: "/printpoa",
-    name: "PrintPOA",
-    component: POAForm,
+    path: "/printpersonal",
+    name: "PrintPersonal",
+    component: PersonalPOAForm,
+    props: true
+  },
+  {
+    path: "/printbusiness",
+    name: "PrintBusiness",
+    component: BusinessPOAForm,
     props: true
   },
   {

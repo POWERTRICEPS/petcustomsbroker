@@ -1,5 +1,8 @@
 <template>
   <NavBar/>
+  <div class="empty">
+    <h1>       z</h1>
+  </div>
   <div class="row">
 
     <div class="column">
@@ -40,6 +43,9 @@ export default {
      NavBar,
     FooterBar   
   },
+  mounted () {
+    window.scrollTo(0, 0)
+  },
 };
 </script>
 
@@ -54,7 +60,9 @@ export default {
 .row {
   justify-content: space-between;
 }
-
+.empty {
+  margin-bottom: 125px;
+}
 .row:after {
   content: "";
   display: table;
@@ -79,7 +87,7 @@ export default {
 .contact {
     vertical-align: top;
     display: inline-block;
-    width: 1000px;
+    width: auto;
     margin: 20px 0px;
 }
 

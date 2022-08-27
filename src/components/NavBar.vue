@@ -1,17 +1,24 @@
 <template>
-    <header>
-        <nav>
-            <router-link class="logo" :to="{ name: 'Home'}"> <img src="../assets/logopic.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
-            
-            <ul v-show="!mobile" class="navigation">
+    <header :class="{ 'onScroll': view.topOfPage && this.transparent}">
+        <nav v-show="!mobile">
+            <div :class="{'mobile-logo': mobile }">
+                <router-link class="logo" :to="{ name: 'Home'}"> <img src="../assets/logonew.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
+            </div>
+            <ul  class="navigation">
                 <li><router-link class="link" :to="{ name: 'Home'}">Home</router-link></li>
                 <li><router-link class="link" :to="{ name: 'Clearance'}">Clearance</router-link></li>
                 <li><router-link class="link" :to="{ name: 'Resources'}">Resources</router-link></li>
                 <li><router-link class="link" :to="{ name: 'Contacts'}">Contacts</router-link></li>
             </ul>
+        </nav>
+        <nav  v-show="mobile">
+            <div :class="{'mobile-logo': mobile }">
+                <router-link class="logo" :to="{ name: 'Home'}"> <img src="../assets/logonew.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
+            </div>
 
             <div class="icon">
-                <i v-show="mobile" @click="toggleMobileNav"  class="fas fa-cloud" :class="{ 'icon-active': mobileNav}"></i>
+                <button style="background-color:red" class="menubutton" v-show="mobile" v-on:click="this.mobileNav = !this.mobileNav;">Menu</button>
+                <!--<i v-show="mobile" v-on:click="toggleMobileNav"  class="fas fa-cloud" ></i>-->
             </div>
 
             <transition name="mobile-nav">
@@ -29,33 +36,43 @@
 <script>
 export default {
     name: "NavBar",
+    props: ['transparent'],
     data() {
         return {
-            mobile: null,
-            mobileNav: null,
-            windowWidth: null,
+            mobile: false,
+            mobileNav: false,
+            windowWidth: 1500,
+            view: {
+                topOfPage: true
+            }
         };
     },
-
+    beforeMount() {
+        window.addEventListener('scroll', this.handleScroll)
+    },
     created() {
         window.addEventListener('resize', this.checkScreen);
         this.checkScreen();
     },
 
     methods: {
-        toggleMobileNav() {
-
-            this.mobileNav = !this.mobileNav;
-        },
         checkScreen() {
+    
             this.windowWidth = window.innerWidth;
-            if (this.windowWidth <= 750) {
+            if (this.windowWidth <= 1100) {
                 this.mobile = true;
                 return;
             }
             this.mobile = false;
             this.movileNav = false;
             return;
+        },
+        handleScroll(){
+            if(window.pageYOffset>0){
+                if(this.view.topOfPage) this.view.topOfPage = false
+            } else {
+            if(!this.view.topOfPage) this.view.topOfPage = true
+            }
         }
     }
 }
@@ -63,12 +80,18 @@ export default {
 
 <style lang="scss" scoped>
     header{
-        background-color: #326698; //rgba(0, 0, 0, 0.8);
+        background-color: rgba(50, 102, 152, 1);
         z-index: 99;
         width: 100%;
-        position: relative;
+        position: fixed;
         transition: 0.5s ease all;
         color: #ffff;
+
+        &.onScroll {
+            box-shadow: 0 0 10px #aaa;
+            background-color: rgba(50, 102, 152, 0);
+            
+        }
 
     nav {
         display: flex;
@@ -80,6 +103,8 @@ export default {
         @media (min-width: 1140px) {
             max-width: 1140px;
         }
+
+
 
         ul,
         .link {
@@ -137,6 +162,14 @@ export default {
             
         }
 
+        .mobile-logo {
+            position: absolute;
+            height: 20px;
+            width: 500px;       
+            left: 0%;
+            top: 0%; 
+        }
+
         .navigation {
             
             display: flex;
@@ -145,14 +178,34 @@ export default {
             justify-content: flex-end;
         }
 
+        .menubutton {
+            font-weight: bold;
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 10px;
+            font-family: Helvetica, Arial,  sans-serif;
+            height:30px;
+            width:200px;
+}
+        
+
         .icon {
             display: flex;
-            position: absolute;
+            position: relative;
+            justify-content: right;
+           
             align-items: center;
-            top: 0;
-            right: 24px;
+            left: 95%;
             height: 100%;
-
+            padding: 16px;
+            width: 100px;
             i {
                 cursor: pointer;
                 font-size: 24px;
