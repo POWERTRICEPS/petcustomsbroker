@@ -3,19 +3,22 @@
     <div class="empty">
       <h1>       z</h1>
     </div>
-    <form>
+    <form @submit.prevent="sendEmail">
       <div class="centered">
         <label >Inquiry</label><br>
       </div>
+      <label>Name:</label>
+      <input type="text" required v-model="name">
       <label>Email:</label>
       <input type="text" required v-model="email">
-      <label>Topic:</label>
-      <input type="text" required v-model="topic">
+      <label>Subject:</label>
+      <input type="text" required v-model="subject">
       <label>Message:</label>
       <textarea required v-model="msg"> </textarea>
       <div class="centered">
-        <button class="submit" >Submit</button>
-      </div>
+        <input class="submit" type="submit" value="Submit">
+        <!--<button class="submit" >Submit</button>-->
+     </div>
     </form>
     <FooterBar/>
 
@@ -23,9 +26,11 @@
 
 
 <script>
+import emailjs from 'emailjs-com';
 import NavBar from '../components/NavBar.vue'
 import FooterBar from '../components/FooterBar.vue'
-//import axios from 'axios'
+// Import one of the available themes
+//import 'vue-toast-notification/dist/theme-default.css';
 // @ is an alias to /src
 export default {
   name: "InquiryPage",
@@ -35,15 +40,39 @@ export default {
   },
   data() {
     return {
+      name: '',
       email: '',
-      topic: '',
+      subject: '',
       msg: '',
     }
   },
   mounted () {
     window.scrollTo(0, 0)
   },
+  methods: {
+    sendEmail() {
+      console.log(this.name);
+      try {
+        emailjs.send('service_i7alwaf', 'template_jt5n7jn',
+        {
+          name: this.name,
+          subject: this.subject,
+          email: this.email,
+          msg: this.msg
+        },
+        'rLUmHSy89Rry8grvs');
+        this.$toast.success(`Inquiry successully sent!`);
+        setTimeout(this.$toast.clear, 3000);
 
+      } catch(error) {
+          console.log({error})
+      }
+      this.name = ''
+      this.subject = ''
+      this.email = ''
+      this.msg = ''
+    },
+  }
   
 };
 </script>
@@ -83,7 +112,7 @@ textarea{
   
   
   color: #555;
-  height:400px;
+  height:200px;
   width:100%;
 }
 
@@ -116,6 +145,7 @@ input[type="checkbox"] {
   margin-top: 20px;
   color: white;
   border-radius: 20px;
-  
+  width:100px;
+  margin-left: 215px;
 }
 </style>

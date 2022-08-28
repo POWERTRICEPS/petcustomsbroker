@@ -8,7 +8,7 @@
 
 
 <!-- Begin text definitions (Positioned/styled in CSS) -->
-<div id="business" class="t type">Business/Commercial Pet Import</div>
+<div id="business" class="t type">Business/Commercial Import</div>
 <div id="t1_1" class="t s1_1">CUSTOMS POWER OF ATTORNEY</div>
 <div id="t2_1" class="t s2_1">(1)</div>
 <div id="t3_1" class="t s3_1">Federal Tax ID</div>
@@ -129,7 +129,7 @@
 <div id="t_db2" class="t s4_1">(14)</div>
 -->
 <div id="poid" class="t s4_1">If your EIN/SSN is new in customs system, the following documents are required as proof of ID:</div>
-<div id="poid2" class="t s4_1"><strong>***</strong>EIN copy of SS-4 letter from IRS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>***</strong>Copy of Driver's License&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>***</strong>SSN: copy of Social Security Card</div>
+<div id="poid2" class="t s4_1"><strong>***</strong>EIN copy of SS-4 letter from IRS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>***</strong>SSN: copy of Social Security Card&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>***</strong>Copy of Driver's License</div>
 <div id="t_ema" class="t s4_1">{{email}}</div> 
 <div id="date1" class="t s4_1"> {{ currentDate() }}</div>
 <!--

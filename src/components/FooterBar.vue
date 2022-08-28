@@ -5,7 +5,7 @@
             <h1>&copy; 2022 All Rights Reserved</h1>
             
         </div>
-        <img class="footer-logo" src="../assets/logonew.png">
+        <img class="footer-logo" src="../assets/logopic.png">
     </div>
 </template>
 
@@ -49,7 +49,7 @@
 }
 
 .footer-logo {
-    margin-top:75px;
+    
     position: relative;
     left: 47%;
     

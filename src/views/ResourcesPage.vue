@@ -1,10 +1,12 @@
 <template>
 <NavBar :transparent=false />
-<img src="../assets/long.png" class="longpic">
+  <div class="empty">
+    <h1>       z</h1>
+  </div>
     <div class="container">
       
       <img src="../assets/puppy.png" v-show="!mobile" class="puppypic">
-      <img src="../assets/kitten.png" v-show="!mobile" class="kittenpic">
+      <img src="../assets/3kitten.png" v-show="!mobile" class="kittenpic">
       <h1 class="resource-title">INFORMATION FOR IMPORTING DOGS AND CATS</h1>
 
       <h1 class="pet-section">Dogs from Countries Without High Risk of Rabies</h1>
@@ -99,12 +101,10 @@
         <a href="https://www.aphis.usda.gov/aphis/ourfocus/animalwelfare/dog-import-into-us/import-live-dogs-into-us"><p class="word-block">https://www.aphis.usda.gov/aphis/ourfocus/animalwelfare/dog-import-into-us/import-live-dogs-into-us</p></a>
         <p class="word-block">3. Link for high-risk countries for dog rabies</p>
         <a href="https://www.cdc.gov/importation/bringing-an-animal-into-the-united-states/high-risk.html"><p class="word-block">https://www.cdc.gov/importation/bringing-an-animal-into-the-united-states/high-risk.html</p></a>
+      
       </div>
-
-
-    <!--link for usda import permit-->
-    <!--link for cdc dogs import-->
     </div>
+  <div class="empty"></div>
 <FooterBar/>
 </template>
 
@@ -121,7 +121,8 @@ export default {
   },
   data() {
         return {
-            mobile: false
+            mobile: false,
+            windowWidth: null
         }
   },
   mounted () {
@@ -139,7 +140,6 @@ export default {
                 return;
             }
             this.mobile = false;
-            this.movileNav = false;
             return;
         }
   }
@@ -147,7 +147,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.empty {
+  margin-bottom: 125px;
+}
 .longpic {
   margin-top:100px;
   margin-bottom:100px;
@@ -157,19 +159,19 @@ export default {
 
 .puppypic {
   position:absolute;
-  top: 7%;
+  top: 2%;
   left: 79%;
-  width: 20%;
-  height: 400px;
+  width: auto;
+  height: 380px;
   
 }
 
 .kittenpic {
   position:absolute;
-  top: 75.5%;
-  left: 75%;
-  width: 20%;
-  height: 400px;
+  top: 70.7%;
+  left: 60%;
+  width: auto;
+  height: 600px;
   
 }
 

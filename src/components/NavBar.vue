@@ -1,8 +1,8 @@
 <template>
     <header :class="{ 'onScroll': view.topOfPage && this.transparent}">
         <nav v-show="!mobile">
-            <div :class="{'mobile-logo': mobile }">
-                <router-link class="logo" :to="{ name: 'Home'}"> <img src="../assets/logonew.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
+            <div>
+                <router-link class="logo" :to="{ name: 'Home'}"> <img class="logopic" src="../assets/logonew.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
             </div>
             <ul  class="navigation">
                 <li><router-link class="link" :to="{ name: 'Home'}">Home</router-link></li>
@@ -12,8 +12,8 @@
             </ul>
         </nav>
         <nav  v-show="mobile">
-            <div :class="{'mobile-logo': mobile }">
-                <router-link class="logo" :to="{ name: 'Home'}"> <img src="../assets/logonew.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
+            <div>
+                <router-link class="mobile-logo" :to="{ name: 'Home'}"> <img class="mobile-logopic" src="../assets/logonew.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
             </div>
 
             <div class="icon">
@@ -115,15 +115,15 @@ export default {
         }
 
         li {
-            text-transform: uppercase;
+            
             padding: 16px;
             margin-left: 16px;
             
         }
 
         .link {
-            font-weight: bold;
-            font-family: Helvetica, Arial,  sans-serif;
+            
+            font-family: Arial,  Helvetica, sans-serif;
             font-size: 14px;
             transition: .5s ease all;
             padding-bottom: 4px;
@@ -145,6 +145,15 @@ export default {
                 transition: .5s ease all; 
             }
         }
+        .logopic {
+            height:100px;
+            width:175px;
+        }
+
+        .mobile-logopic {
+            height:87px;
+            width: 150px;
+        }
 
         .logo {
             position: absolute;
@@ -164,10 +173,18 @@ export default {
 
         .mobile-logo {
             position: absolute;
-            height: 20px;
-            width: 500px;       
-            left: 0%;
-            top: 0%; 
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: flex-end;
+            left: 8%;
+            top: 0%;
+            color: white;
+            font-weight: bold;
+            font-family: Helvetica, Arial,  sans-serif;
+            font-size: 15px;
+            text-decoration: none;
+            
         }
 
         .navigation {

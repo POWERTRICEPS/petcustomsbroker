@@ -3,6 +3,7 @@
   <div class="empty">
     <h1>       z</h1>
   </div>
+  <img v-show="!mobile" class="contactpic" src="../assets/contacts.png">
   <div class="row">
 
     <div class="column">
@@ -27,8 +28,10 @@
         <p class="contact-block">South San Francisco, CA 94080</p>
       </div>
     </div>
-
   </div>
+  <column>
+    
+  </column>
   <FooterBar/>
 </template>
 
@@ -43,14 +46,42 @@ export default {
      NavBar,
     FooterBar   
   },
+  data() {
+    return {
+      mobile: false,
+      windowWidth: null
+    }
+  },
   mounted () {
     window.scrollTo(0, 0)
   },
+  created() {
+      window.addEventListener('resize', this.checkScreen);
+      this.checkScreen();
+  },
+  methods: {
+        checkScreen() {
+            this.windowWidth = window.innerWidth;
+            if (this.windowWidth <= 1100) {
+                this.mobile = true;
+                return;
+            }
+            this.mobile = false;
+            return;
+        }
+  }
 };
 </script>
 
 
 <style>
+.contactpic {
+  position: absolute;
+  left:61%;
+  width:auto;
+  height:200px;
+  top:7.5%;
+}
 .gmap_canvas {
   overflow:hidden;
   background:none!important;
@@ -73,7 +104,7 @@ export default {
 .column {
   float: left;
   width: 30%;
-  margin: 80px 0px 100px 250px;
+  margin: 80px 25px 100px 250px;
   
 }
 

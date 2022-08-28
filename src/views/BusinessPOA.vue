@@ -123,7 +123,7 @@ export default {
   },
   data() {
     return {
-      style: "Individual",
+      style: "Corporation",
       companyName: '',
       IRS: '',
       dba: '',

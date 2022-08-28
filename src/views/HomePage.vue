@@ -19,7 +19,8 @@ export default {
   },
   data() {
         return {
-            mobile: false
+            mobile: false,
+            windowWidth: null
         }
   },
   created() {
@@ -34,7 +35,6 @@ export default {
                 return;
             }
             this.mobile = false;
-            this.movileNav = false;
             return;
         }
   }

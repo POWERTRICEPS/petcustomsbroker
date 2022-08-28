@@ -1,6 +1,6 @@
 <template>
     <NavBar :transparent=false />
-    <img src="../assets/dogcat.jpg">
+    <img src="../assets/long.png">
     <div class="row">
       
       <div :class="{ 'column': !mobile, 'column-mobile': mobile}">
@@ -58,7 +58,8 @@ export default {
 data () {
   return {
   publicPath: process.env.BASE_URL,
-  mobile: false
+  mobile: false,
+  windowWidth: null
   }
 },
 methods :{
@@ -69,7 +70,6 @@ methods :{
                 return;
             }
             this.mobile = false;
-            this.movileNav = false;
             return;
         }
   }
@@ -78,9 +78,10 @@ methods :{
 
 <style lang="scss" scoped>
 img {
-  opacity: 0.8;
-  width: 100%;
-  height: 700px;
+  margin-top:100px;
+  margin-bottom:100px;
+  height:200px;
+  width:100%;
 }
 .row {
   justify-content: space-between;
