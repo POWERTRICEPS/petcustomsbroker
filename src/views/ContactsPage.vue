@@ -6,12 +6,13 @@
   <img v-show="!mobile" class="contactpic" src="../assets/contacts.png">
   <div class="row">
 
-    <div class="column">
+    <div class="column1">
       <div class="gmap_canvas">
         <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=139%20Mitchell%20Ave&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><a href="https://www.embedgooglemap.net">put google maps on your website</a>
       </div>
     </div>
-    <div class="column">
+
+    <div class="column2">
       <div class="contact">
         <h1 class="contact-title">Email</h1>
         <p class="contact-block">oriox@att.net</p>
@@ -29,9 +30,7 @@
       </div>
     </div>
   </div>
-  <column>
-    
-  </column>
+
   <FooterBar/>
 </template>
 
@@ -62,7 +61,7 @@ export default {
   methods: {
         checkScreen() {
             this.windowWidth = window.innerWidth;
-            if (this.windowWidth <= 1100) {
+            if (this.windowWidth <= 1300) {
                 this.mobile = true;
                 return;
             }
@@ -77,16 +76,16 @@ export default {
 <style>
 .contactpic {
   position: absolute;
-  left:61%;
+  left:40%;
   width:auto;
-  height:200px;
-  top:7.5%;
+  height:300px;
+  top:17.5%;
 }
 .gmap_canvas {
   overflow:hidden;
   background:none!important;
-  height:500px;
-  width:600px;}
+  height:400px;
+  width:500px;}
 
 .row {
   justify-content: space-between;
@@ -101,10 +100,17 @@ export default {
   
 }
 
-.column {
+.column1 {
   float: left;
-  width: 30%;
-  margin: 80px 25px 100px 250px;
+  width: 25%;
+  margin: 80px 300px 100px 150px;
+  
+}
+
+.column2 {
+  float: left;
+  width: 25%;
+  margin: 80px 150px 100px 300px;
   
 }
 

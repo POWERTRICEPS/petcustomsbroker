@@ -1,9 +1,9 @@
 <template>
     <header :class="{ 'onScroll': view.topOfPage && this.transparent}">
         <nav v-show="!mobile">
-            <div>
-                <router-link class="logo" :to="{ name: 'Home'}"> <img class="logopic" src="../assets/logonew.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
-            </div>
+            
+            <router-link class="logo" :to="{ name: 'Home'}"> <img class="logopic" src="../assets/logonew.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
+            
             <ul  class="navigation">
                 <li><router-link class="link" :to="{ name: 'Home'}">Home</router-link></li>
                 <li><router-link class="link" :to="{ name: 'Clearance'}">Clearance</router-link></li>
@@ -12,7 +12,7 @@
             </ul>
         </nav>
         <nav  v-show="mobile">
-            <div>
+            <div class="logodiv">
                 <router-link class="mobile-logo" :to="{ name: 'Home'}"> <img class="mobile-logopic" src="../assets/logonew.png">&nbsp;&nbsp;&nbsp;Oriox Customs Broker Inc.</router-link>
             </div>
 
@@ -124,7 +124,7 @@ export default {
         .link {
             
             font-family: Arial,  Helvetica, sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             transition: .5s ease all;
             padding-bottom: 4px;
             border-bottom: 1px solid transparent;
@@ -136,6 +136,9 @@ export default {
             }
         }
 
+        .logodiv {
+            padding: 16px;
+        }
         .branding {
             display: flex;
             align-items: center;
@@ -146,13 +149,13 @@ export default {
             }
         }
         .logopic {
-            height:100px;
-            width:175px;
+            height:57px;
+            width:100px;
         }
 
         .mobile-logopic {
-            height:87px;
-            width: 150px;
+            height:43px;
+            width: 75px;
         }
 
         .logo {
@@ -162,7 +165,7 @@ export default {
             flex: 1;
             justify-content: flex-end;
             left: 8%;
-            top: 0%;
+            top: 20%;
             color: white;
             font-weight: bold;
             font-family: Helvetica, Arial,  sans-serif;
@@ -178,7 +181,7 @@ export default {
             flex: 1;
             justify-content: flex-end;
             left: 8%;
-            top: 0%;
+            top: 30%;
             color: white;
             font-weight: bold;
             font-family: Helvetica, Arial,  sans-serif;
@@ -202,7 +205,7 @@ export default {
             color: #fff;
             border: none;
             padding: 10px 20px;
-            margin: 5px 30px;
+            margin: 5px 100px;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
@@ -219,7 +222,7 @@ export default {
             justify-content: right;
            
             align-items: center;
-            left: 95%;
+            left: 87%;
             height: 100%;
             padding: 16px;
             width: 100px;

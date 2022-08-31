@@ -66,6 +66,8 @@ export default {
 
       } catch(error) {
           console.log({error})
+          this.$toast.error(`Error! Please try again later.`);
+          setTimeout(this.$toast.clear, 3000);
       }
       this.name = ''
       this.subject = ''

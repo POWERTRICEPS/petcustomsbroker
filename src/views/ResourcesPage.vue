@@ -159,7 +159,7 @@ export default {
 
 .puppypic {
   position:absolute;
-  top: 2%;
+  top: 8%;
   left: 79%;
   width: auto;
   height: 380px;

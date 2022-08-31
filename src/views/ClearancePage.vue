@@ -5,11 +5,11 @@
       
       <div :class="{ 'column': !mobile, 'column-mobile': mobile}">
         <h1 :class="{ 'clearance-section': !mobile, 'clearance-section-mobile': mobile}"> Documents for Clearance</h1>
-        <ol :class="{ 'word-block': !mobile, 'word-block-mobile': mobile}">
-          <li>Power of Attorney</li>
-          <li>Health Documents/Certificate/Passport/Permit</li>
-          <li>Invoice/Pro Forma Invoice/Receipt</li>
-          <li>Air Waybill</li>
+        <ol :class="{ 'word-block1': !mobile, 'word-block-mobile': mobile}">
+          <li>1. Power of Attorney</li>
+          <li>2. Health Documents/Certificate/Passport/Permit</li>
+          <li>3. Invoice/Pro Forma Invoice/Receipt</li>
+          <li>4. Air Waybill</li>
         </ol>
         
         <router-link class="poa-link" :to="{ name: 'Personal'}">
@@ -25,11 +25,11 @@
 
       <div :class="{ 'column': !mobile, 'column-mobile': mobile}">
         <h1 :class="{ 'clearance-section': !mobile, 'clearance-section-mobile': mobile}">How It Works</h1>
-        <ol :class="{ 'word-block': !mobile, 'word-block-mobile': mobile}">
-          <li>Send us POA and documents prior to shipment arrival</li>
-          <li>Pay us via Zelle, Paypal, or Venmo</li>
-          <li>We will send you pickup document and notify you once customs released</li>
-          <li>You should check the flight status and arrange pickup at the airlines' cargo facility.
+        <ol :class="{ 'word-block2': !mobile, 'word-block-mobile': mobile}">
+          <li>1. Send us POA and documents prior to shipment arrival</li>
+          <li>2. Pay us via Zelle, Paypal, or Venmo</li>
+          <li>3. We will send you pickup document and notify you once customs released</li>
+          <li>4. Check the flight status and arrange pickup at the airlines' cargo facility.
 Usually it takes 1 to 2 hours for the pets to be transferred to the cargo facility after landing</li>
         </ol>
       </div>
@@ -77,10 +77,14 @@ methods :{
 </script>
 
 <style lang="scss" scoped>
+
+.blue {
+  background-color: rgba(50, 102, 152, 1);
+}
 img {
   margin-top:100px;
-  margin-bottom:100px;
-  height:200px;
+  
+  height:175px;
   width:100%;
 }
 .row {
@@ -97,14 +101,14 @@ img {
 .column {
   float: left;
   width: 30%;
-  margin: 80px 0px 100px 250px;
+  margin: 50px 0px 100px 200px;
   
 }
 
 .column-mobile {
   float: left;
-  width: 30%;
-  margin: 80px 0px 100px 150px;
+  width: 50%;
+  margin: 80px 75px 100px 75px;
 }
 
 .clearance-section {
@@ -118,16 +122,30 @@ img {
   font-size: 20px;
 }
 
-.word-block {
+.word-block1 {
   line-height: 1.5;
   margin-bottom: 25px;
-  font-size: 30px;
+  font-size: 25px;
+
+  list-style: none;
+}
+
+.word-block2 {
+  line-height: 1.5;
+  margin-bottom: 25px;
+  font-size: 20px;
+  background-color: rgba(50, 102, 152, 1);
+  color: white;
+  list-style: none;
+  padding:30px;
+  border-radius: 20px;
 }
 
 .word-block-mobile {
   line-height: 1.5;
   margin-bottom: 25px;
-  font-size: 20px;
+  font-size: 15px;
+  list-style: none;
 }
 
 .poa-link {
@@ -166,7 +184,7 @@ img {
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 13px;
   font-family: Helvetica, Arial,  sans-serif;
   height: fit-content;
   width: fit-content;
